@@ -9,8 +9,7 @@ export default function NewHeroSection() {
           <div className="space-y-4 md:space-y-6">
             <h1 className="text-3xl md:text-[40px] font-semibold title max-w-full lg:max-w-[446px]">
               <AnimatedText withScrollTrigger={false} stagger={0.06}>
-                Lateef Akinyemi, <br></br>
-Senior Product Designer & Design Engineer
+                {"Lateef Akinyemi, Senior Product Designer & Design Engineer"}
               </AnimatedText>
             </h1>
             <p className="text-sm md:text-base max-w-full lg:max-w-[702px] text-[#595959]">
