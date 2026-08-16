@@ -32,13 +32,11 @@ export default function AboutFaramove() {
               (Animator), Olawole (3D designer){" "}
             </p>
           </div>
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-6 gap-y-4 mt-6">
-            {faraProduct.map((product, index) => (
+          <section className="grid grid-cols-2 md:grid-cols-3 gap-6 gap-y-4 mt-6">
+            {faraProduct.map((product) => (
               <article
                 key={product.title}
-                className={`flex flex-col ${
-                  index < 4 ? "col-span-1" : "col-span-2"
-                }`}
+                className="flex flex-col"
               >
                 <h4 className="text-lg font-extrabold">{product.title}</h4>
 

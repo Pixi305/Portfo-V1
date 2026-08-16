@@ -52,13 +52,13 @@ export default function FaramoveProcess() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-10 container">
         {designSteps.map((step, index) => (
-          <div key={index} className="flex justify-center items-center">
+          <div key={index}>
             <Image
               src={`/images/${step.image}.png`}
               alt={step.image}
               width={960}
               height={720}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto"
             />
           </div>
         ))}
