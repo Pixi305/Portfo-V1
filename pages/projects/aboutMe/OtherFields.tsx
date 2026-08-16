@@ -1,5 +1,12 @@
 import Image from "next/image";
 
+const experiences = [
+  { company: "QEDA", role: "Principal Tech & Operations Associate (Design Engineer)", start: "Oct 2024", end: "Present", contractType: "Full-time" },
+  { company: "Faramove", role: "Product Lead, Design & Dev", start: "September 2024", end: "November 2025", contractType: "Full Time" },
+  { company: "Alerzo", role: "Senior Product Designer", start: "May 2021", end: "Sept 2024", contractType: "Full-time" },
+  { company: "Rendize", role: "Product Designer", start: "January 2020", end: "June 2021", contractType: "Full Time" },
+];
+
 export default function OtherFields() {
   return (
     <section className="space-y-12 container px-4 md:px-6 pb-12">
@@ -14,9 +21,26 @@ export default function OtherFields() {
       <div>
         <Image src="/images/tools.png" alt="Tools" width={1920} height={1080} className="w-full h-auto" />
       </div>
-      <div>
-        <Image src="/images/exp-image.png" alt="Experience" width={1920} height={1080} className="w-full h-auto" />
-      </div>
+
+      <section id="experience" className="mt-12 mb-20">
+        <h2 className="text-4xl md:text-[55px] font-semibold leading-tight md:leading-[56px] mb-12 md:mb-24 text-center">
+          Experiences
+        </h2>
+        <div className="grid items-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {experiences.map((exp, i) => (
+            <article key={exp.company + i} className="mb-4 md:mb-6">
+              <h4 className="text-2xl md:text-[32px] font-extrabold">{exp.company}</h4>
+              <p className="text-xl md:text-[32px] font-semibold text-la-black2">{exp.role}</p>
+              <p className="text-base md:text-xl font-semibold text-la-gray2">
+                {exp.start} - {exp.end}
+              </p>
+              {exp.contractType && (
+                <span className="text-base md:text-xl font-semibold text-la-gray2">{exp.contractType}</span>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
     </section>
   );
 }
