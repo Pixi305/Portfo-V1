@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutVeedez() {
   return (
     <section className="mt-12 ">
@@ -39,10 +41,12 @@ export default function AboutVeedez() {
 
               {product.icon ? (
                 <div className="flex gap-2 items-center">
-                  <img
+                  <Image
                     className="h-4 w-4"
                     src={`/icons/${product.icon}.svg`}
                     alt=""
+                    width={16}
+                    height={16}
                   />
                   <a
                     href={product.link}
@@ -71,7 +75,7 @@ export default function AboutVeedez() {
         </div>
       </section>
       <div className="pb-6 container">
-        <img src="/images/veedezcomp.png" alt="" />
+        <Image src="/images/veedezcomp.png" alt="Veedez components" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <section>
         <div className="px-48 mt-10 mb-8">
@@ -80,8 +84,8 @@ export default function AboutVeedez() {
             subText="We conducted user interviews to validate our problem-solving idea.
           The goal of design research is to shape the design process
             from the end user's perspective. While I, as an average Nigerian,
-            can empathize with the problem, it’s essential that design decisions
-            reflect the user’s view.We started by asking, 'Who will be using our product?' and 'Who is our target audience?'
+            can empathize with the problem, it's essential that design decisions
+            reflect the user's view.We started by asking, 'Who will be using our product?' and 'Who is our target audience?'
              Research in Nigeria shows that the
           largest group of internet users falls between the ages of 18-60,
             covering Gen Z, Millennials, and Gen X. This group includes
@@ -94,7 +98,7 @@ export default function AboutVeedez() {
         </div>
       </section>
       <div className="container">
-        <img src="/images/pain-point.png" alt="" />
+        <Image src="/images/pain-point.png" alt="Pain points" width={1920} height={1080} className="w-full h-auto" />
       </div>
     </section>
   );

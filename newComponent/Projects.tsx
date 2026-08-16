@@ -1,72 +1,41 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section className="container mt-12">
-      <h1 className="font-semibold text-[55px] my-6 text-center">Selected Projects</h1>
-      <div className="flex flex-col space-y-12 items-start text-xl">
-        {projectImages.map((image) => (
-          <div className="relative" key={image.img}>
-            <Link href={image.link} passHref>
-              <img
+    <section className="container mt-12 px-4 md:px-6">
+      <h1 className="font-semibold text-4xl md:text-[55px] my-6 text-center">Selected Projects</h1>
+      <div className="flex flex-col space-y-8 md:space-y-12 items-start">
+        {projectImages.map((image) =>
+          image.link ? (
+            <Link href={image.link} passHref key={image.img} className="w-full">
+              <Image
                 src={`/images/${image.img}`}
-                alt={image.img}
-                // className="cursor-pointer transform transition duration-300 ease-in-out hover:scale-105 hover:opacity-40"
+                alt={image.title ?? image.img}
+                width={2650}
+                height={1252}
+                className="w-full h-auto rounded-xl md:rounded-2xl"
               />
-              {/* <div className="opacity-0 hover:opacity-100 absolute inset-0 bg-lpBg rounded-3xl"> */}
-                              {/* <div className=" rounded-3xl"> */}
-
-                {/* <span className="text-[50px] text-white bottom-20 absolute left-[52px] font-semibold">
-                  {image.title}
-                </span> */}
-                {/* <p className="text-[24px] text-white bottom-10 absolute left-[52px] font-light">
-                  {image.text}
-                </p> */}
-                {/* <a className="absolute border rounded-3xl px-3 py-2 text-white text-[24px] border-white bottom-10 right-[52px] cursor-pointer">
-                  {image.subText}
-                </a> */}
-              {/* </div> */}
             </Link>
-          </div>
-        ))}
+          ) : (
+            <Image
+              key={image.img}
+              src={`/images/${image.img}`}
+              alt={image.title ?? image.img}
+              width={2650}
+              height={1252}
+              className="w-full h-auto rounded-xl md:rounded-2xl"
+            />
+          )
+        )}
       </div>
     </section>
   );
 }
 
-const projectImages: Array<{
-  img: string;
-  link: string;
-  title?: string;
-  text?: string;
-  subText: string;
-}> = [
-  {
-    img: "Veedez.png",
-    link: "/projects/veedez",
-    title: "Veedez Pay",
-    text: "Neobank",
-    subText: "Case study",
-  },
-  {
-    img: "Fara.png",
-    link: "/projects/faramove",
-    title: "Faramove",
-    text: "Cheap Logistic",
-    subText: "Case study",
-  },
-  {
-    img: "Jeeatar.png",
-    link: "/projects/jeetar",
-    title: "Jeetar",
-    text: "Super App",
-    subText: "Case study",
-  },
-  {
-    img: "Alerzoshop.png",
-    title: "Alerzoshop",
-    text: "B2B E-commerce",
-    subText: "Case study -Coming Soon",
-    link: "", // No link for this one
-  },
+const projectImages = [
+  { img: "Veedez.png", link: "/projects/veedez", title: "Veedez Pay" },
+  { img: "Fara.png", link: "/projects/faramove", title: "Faramove" },
+  { img: "Jeeatar.png", link: "/projects/jeetar", title: "Jeetar" },
+  { img: "Alerzoshop.png", link: "", title: "Alerzoshop — Coming Soon" },
 ];

@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
-import dayjs from "dayjs";
+import Image from "next/image";
 
 export default function Footer() {
   const [currentTime, setCurrentTime] = useState<string>("");
 
   useEffect(() => {
     const updateTime = () => {
-      setCurrentTime(dayjs().format("hh:mm:ss A"));
+      setCurrentTime(
+        new Date().toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        })
+      );
     };
     updateTime();
-    const intervalId = setInterval(updateTime, 1000); // Update every second
-
-    return () => clearInterval(intervalId); // Cleanup on component unmount
+    const intervalId = setInterval(updateTime, 1000);
+    return () => clearInterval(intervalId);
   }, []);
 
   const scrollToTop = (): void => {
     const scrollTarget = document.querySelector("#__next > main");
     if (scrollTarget) {
-      scrollTarget.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      scrollTarget.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -28,30 +30,31 @@ export default function Footer() {
     <footer className="py-[70px] bg-la-gray4">
       <section className="flex flex-col items-start md:items-center justify-center px-4 md:px-10 lg:px-32 text-left md:text-center">
         <h5 className="text-3xl md:text-4xl lg:text-5xl text-la-gray3 font-medium title mb-4 text-start">
-          Want to reach out about a project, collaboration or just want
-          to say a friendly hello👋🏾?
+          Want to reach out about a project, collaboration or just want to say a friendly hello👋🏾?
         </h5>
         <div className="flex flex-col md:flex-row gap-2 md:gap-3 items-start md:items-center justify-center mt-10">
           <a
             href="mailto:akinyemilateefgbolahan@gmail.com"
             className="font-medium text-2xl md:text-4xl lg:text-[80px] title hover:underline"
-                target="_blank"
+            target="_blank"
             rel="noreferrer noopener"
           >
-            Get in Touch 
+            Get in Touch
           </a>
         </div>
       </section>
 
       <div className="mt-10 md:mt-12 flex flex-1 justify-center">
-        <img
+        <Image
           src="/images/FooterLogo.png"
           alt="Footer Logo"
-          className="md:max-w-full lg:max-w-full"
+          width={2875}
+          height={869}
+          className="md:max-w-full lg:max-w-full w-full h-auto"
         />
       </div>
 
-      <div className="flex flex-col md:flex-row  w-full justify-between items-center mt-14 container px-4 md:px-10 lg:px-32 text-sm md:text-base lg:text-lg">
+      <div className="flex flex-col md:flex-row w-full justify-between items-center mt-14 container px-4 md:px-10 lg:px-32 text-sm md:text-base lg:text-lg">
         <div className="flex gap-2 md:gap-3">
           <span>Lagos, NG</span> |<span>{currentTime}</span>
         </div>

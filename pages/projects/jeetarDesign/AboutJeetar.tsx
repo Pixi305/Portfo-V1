@@ -1,12 +1,14 @@
+import Image from "next/image";
+
 export default function AboutJeetar() {
   return (
     <section className="mt-12 space-y-8">
       <section className="flex flex-col justify-center px-48 mb-4">
         <Title
           text="Jeetar"
-          subText=" A super app that provides on-demand delivery services for groceries,
+          subText=" A super app that provides on-demand delivery services for groceries,
           with very fast delivery timeframes between 20 minutes or less. When
-          you need groceries or snacks, Jeetar makes it simple and convenient to
+          you need groceries or snacks, Jeetar makes it simple and convenient to
           obtain what you need, when you need it. Jeetar's user-friendly design
           and streamlined ordering process make it simple to explore a large
           range of products, place your orders, and monitor your delivery in
@@ -30,19 +32,18 @@ export default function AboutJeetar() {
             </p>
           </div>
           <section className="grid grid-cols-2 gap-6 gap-y-4 mt-6">
-            {jeetarProduct.map((product, index) => (
-              <article
-                key={product.title}
-                //   className={`flex flex-col ${index < 4 ? "col-span-1" : "col-span-2"}`}
-              >
+            {jeetarProduct.map((product) => (
+              <article key={product.title}>
                 <h4 className="text-lg font-extrabold">{product.title}</h4>
 
                 {product.icon ? (
                   <div className="flex gap-2 items-center">
-                    <img
+                    <Image
                       className="h-4 w-4"
                       src={`/icons/${product.icon}.svg`}
                       alt=""
+                      width={16}
+                      height={16}
                     />
                     <a
                       href={product.link}
@@ -68,15 +69,17 @@ export default function AboutJeetar() {
             text="Brand Assets"
             subText=" In the early stage of this project i introduced a glassmorphism icon
             set which was later enhanced across the application, i also
-            introduced the typeface picking a very stragith sans serif typecae
+            introduced the typeface picking a very straight sans serif typeface
             to help communicate well visually on digital screens, also the
             colors met accessibility standards."
           />
         </div>
-        <img
+        <Image
           src="/images/jeetar-brand-identity.png"
-          alt=""
-          className="container"
+          alt="Jeetar brand identity"
+          width={1920}
+          height={1080}
+          className="container w-full h-auto"
         />
       </div>
 
@@ -128,23 +131,22 @@ export default function AboutJeetar() {
       </section>
       <section>
         <div className="mt-10">
-          <h3 className="text-5xl font-bold mb-2  text-center">
-            {" "}
+          <h3 className="text-3xl md:text-5xl font-bold mb-2 text-center">
             Competitors - Comparing Existing Competitors
           </h3>
           <p className="text-lg px-48 ">
             In collaboration with the Project Manager, competitive analysis of
-            similar platforms was conducted. This research confirmed Jeetar’s
-            strong potential to offer a unique value proposition in the market.{" "}
+            similar platforms was conducted. This research confirmed Jeetar's
+            strong potential to offer a unique value proposition in the market.
           </p>
         </div>
         <div className="mt-8 container">
-          <img src="/images/competitor.png" alt="" />
+          <Image src="/images/competitor.png" alt="Competitor analysis" width={1920} height={1080} className="w-full h-auto" />
         </div>
       </section>
 
       <div className="container">
-        <img src="/images/swot-analysis.png" alt="" />
+        <Image src="/images/swot-analysis.png" alt="SWOT analysis" width={1920} height={1080} className="w-full h-auto" />
       </div>
     </section>
   );
@@ -156,23 +158,9 @@ const jeetarProduct: Array<{
   text?: string;
   link?: string;
 }> = [
-  {
-    title: "Timeline",
-    icon: "",
-    text: "Aug 2021 - Discounted",
-  },
-  {
-    title: "Website",
-    icon: "link",
-    text: "https://Jeetar.com",
-    link: "https://jeetar-ea.vercel.app/",
-  },
-  {
-    title: "Twitter(X)",
-    icon: "link",
-    text: "https://x.com/jeetarapp",
-    link: "https://x.com/jeetarapp",
-  },
+  { title: "Timeline", icon: "", text: "Aug 2021 - Discounted" },
+  { title: "Website", icon: "link", text: "https://Jeetar.com", link: "https://jeetar-ea.vercel.app/" },
+  { title: "Twitter(X)", icon: "link", text: "https://x.com/jeetarapp", link: "https://x.com/jeetarapp" },
 ];
 
 const Title = ({ text, subText }: { text?: string; subText?: string }) => {

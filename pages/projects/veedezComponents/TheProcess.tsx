@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CategorySlider } from "../../../components/CategorySlider";
 import { TransferSlider } from "../../../components/TransferSlider";
 import { BillSlider } from "../../../components/BillSlider";
@@ -27,26 +28,15 @@ export default function TheProcess() {
                We utilised Jira , a popular Agile tool, to manage our sprints, track user stories,
             and maintain project transparency."
         />
-        <div className="space-y-3">
-          <p className="text-lg text-[#5A5566]"></p>
-          <p className="text-lg text-[#625D6F]"></p>
-          <p className="text-lg text-[#5A5566]">
-            {" "}
-            <Link
-              href={"https://www.atlassian.com/software/jira"}
-              className="text-[#5A5566] underline font-medium"
-            ></Link>{" "}
-          </p>
-        </div>
       </div>
       <div className="container">
-        <img src="/images/our-process.png" alt="" />
+        <Image src="/images/our-process.png" alt="Our process" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <div className="container">
-        <img src="/images/information.png" alt="" />
+        <Image src="/images/information.png" alt="Information architecture" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <div className="bg-[#FAFAFA] rounded-3xl container">
-        <img src="/images/wireframe.png" alt="" />
+        <Image src="/images/wireframe.png" alt="Wireframes" width={1920} height={1080} className="w-full h-auto" />
       </div>
 
       <div className="flex flex-col justify-center px-48">
@@ -60,7 +50,7 @@ export default function TheProcess() {
         />
       </div>
       <div className="flex flex-col space-y-12">
-        <img className="" src="/images/welcome_screen.png" alt="" />
+        <Image src="/images/welcome_screen.png" alt="Welcome screen" width={1920} height={1080} className="w-full h-auto" />
         <div className="space-y-12">
           <p className="text-center font-bold text-[28px]">2. Create Account</p>
           <CategorySlider />
@@ -70,9 +60,7 @@ export default function TheProcess() {
           <TransferSlider />
         </div>
         <div className="space-y-12">
-          <p className="text-center font-bold text-[28px]">
-            4. Bill Payment/Airtime
-          </p>
+          <p className="text-center font-bold text-[28px]">4. Bill Payment/Airtime</p>
           <BillSlider />
         </div>
         <div className="space-y-12">
@@ -90,14 +78,14 @@ export default function TheProcess() {
         />
       </div>
       <div className="container">
-        <img src="/images/user-persona.png" alt="" />
+        <Image src="/images/user-persona.png" alt="User persona" width={1920} height={1080} className="w-full h-auto" />
       </div>
 
       <Link href={"/projects/faramove"} className="cursor-pointer">
         <div className="px-4 py-16 relative">
           <h1 className="text-[48px] font-medium">Next Project</h1>
           <div className="relative group">
-            <img className="" src="/icons/fara.svg" alt="" />
+            <Image src="/icons/fara.svg" alt="Faramove" width={1920} height={200} className="w-full h-auto" />
             <div className="absolute top-1/2 left-0 w-full h-[26px] bg-lp-blue/90 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-in-out origin-left -translate-y-1/2"></div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FaramoveProcess() {
   return (
@@ -25,13 +26,13 @@ export default function FaramoveProcess() {
         />
       </div>
       <div className="container">
-        <img src="/images/our-process.png" alt="" />
+        <Image src="/images/our-process.png" alt="Our process" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <div className="container">
-        <img src="/images/information.png" alt="" />
+        <Image src="/images/information.png" alt="Information architecture" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <div className="bg-[#FAFAFA] rounded-3xl container">
-        <img src="/images/wireframesketch.png" alt="" />
+        <Image src="/images/wireframesketch.png" alt="Wireframe sketches" width={1920} height={1080} className="w-full h-auto" />
       </div>
 
       <div className="flex flex-col justify-center px-48">
@@ -47,15 +48,17 @@ export default function FaramoveProcess() {
         />
       </div>
       <div className="container">
-        <img src="/images/iteration.png" alt="" />
+        <Image src="/images/iteration.png" alt="Design iteration" width={1920} height={1080} className="w-full h-auto" />
       </div>
-      <div className="grid grid-cols-2 gap-6 pb-10 container">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-10 container">
         {designSteps.map((step, index) => (
           <div key={index} className="flex justify-center items-center">
-            <img
+            <Image
               src={`/images/${step.image}.png`}
               alt={step.image}
-              className="object-cover"
+              width={960}
+              height={720}
+              className="w-full h-auto object-cover"
             />
           </div>
         ))}
@@ -66,7 +69,7 @@ export default function FaramoveProcess() {
             <h3 className="text-3xl text-[#16063E] font-bold text-center mb-4">
               {app.title}
             </h3>
-            <img className="" src={app.image} alt={app.alt} />
+            <Image src={app.image} alt={app.alt} width={1920} height={1080} className="w-full h-auto" />
           </div>
         ))}
       </div>
@@ -80,13 +83,13 @@ export default function FaramoveProcess() {
         />
       </div>
       <div className="container">
-        <img src="/images/farapersona.png" alt="" />
+        <Image src="/images/farapersona.png" alt="User persona" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <Link href={"/projects/jeetar"} className="cursor-pointer">
         <div className="px-4 py-16 relative">
           <h1 className="text-[48px] font-medium">Next Project</h1>
           <div className="relative">
-            <img className="" src="/images/jeet.png" alt="" />
+            <Image src="/images/jeet.png" alt="Jeetar project" width={1920} height={400} className="w-full h-auto" />
             <div className="absolute top-1/2 left-0 w-full h-[26px] bg-la-blue/90 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-in-out origin-left -translate-y-1/2"></div>
           </div>
         </div>
@@ -96,47 +99,19 @@ export default function FaramoveProcess() {
 }
 
 const designSteps: { image: string }[] = [
-  {
-    image: "authentication",
-  },
-  {
-    image: "homepage-app",
-  },
-  {
-    image: "bookings",
-  },
-  {
-    image: "financeapp",
-  },
-  {
-    image: "billing-app",
-  },
-  {
-    image: "brokerage",
-  },
+  { image: "authentication" },
+  { image: "homepage-app" },
+  { image: "bookings" },
+  { image: "financeapp" },
+  { image: "billing-app" },
+  { image: "brokerage" },
 ];
 
 const appDetails = [
-  {
-    title: "Website",
-    image: "/images/website.png",
-    alt: "Web Image",
-  },
-  {
-    title: "User Mobile App",
-    image: "/images/userMobileApp.png",
-    alt: "User Mobile App Image",
-  },
-  {
-    title: "User Web App",
-    image: "/images/userWebApp.png",
-    alt: "User Web App Image",
-  },
-  {
-    title: "Rider Mobile App",
-    image: "/images/riderApp.png",
-    alt: "Rider Mobile App Image",
-  },
+  { title: "Website", image: "/images/website.png", alt: "Web Image" },
+  { title: "User Mobile App", image: "/images/userMobileApp.png", alt: "User Mobile App Image" },
+  { title: "User Web App", image: "/images/userWebApp.png", alt: "User Web App Image" },
+  { title: "Rider Mobile App", image: "/images/riderApp.png", alt: "Rider Mobile App Image" },
 ];
 
 const Title = ({ text, subText }: { text?: string; subText: string }) => {

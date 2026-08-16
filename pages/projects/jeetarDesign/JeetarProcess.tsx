@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function JeetarProcess() {
   return (
@@ -16,13 +17,13 @@ export default function JeetarProcess() {
         />
       </div>
       <div className="container">
-        <img src="/images/our-process.png" alt="" />
+        <Image src="/images/our-process.png" alt="Our process" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <div className="container">
-        <img src="/images/jeetar-wireframe.png" alt="" />
+        <Image src="/images/jeetar-wireframe.png" alt="Wireframes" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <div className="bg-[#FAFAFA] rounded-3xl container">
-        <img src="/images/jeetar-fidelity.png" alt="" />
+        <Image src="/images/jeetar-fidelity.png" alt="High fidelity" width={1920} height={1080} className="w-full h-auto" />
       </div>
 
       <div className="flex flex-col justify-center px-48">
@@ -43,7 +44,7 @@ export default function JeetarProcess() {
             <h3 className="text-3xl text-[#16063E] font-bold text-center mb-4">
               {app.title}
             </h3>
-            <img className="" src={app.image} alt={app.alt} />
+            <Image src={app.image} alt={app.alt} width={1920} height={1080} className="w-full h-auto" />
           </div>
         ))}
       </div>
@@ -56,7 +57,7 @@ export default function JeetarProcess() {
         />
       </div>
       <div className="m-0 p-0">
-        <img src="/images/jeetar-feedback.png" alt="" />
+        <Image src="/images/jeetar-feedback.png" alt="Customer feedback" width={1920} height={1080} className="w-full h-auto" />
       </div>
 
       <section className="mt-10">
@@ -67,17 +68,19 @@ export default function JeetarProcess() {
             deliver what we promise in minutes."
           />
         </div>
-        <img
+        <Image
           src="/images/jeetar-images.png"
-          alt=""
-          className="block w-full mt-8 container"
+          alt="Delivery photos"
+          width={1920}
+          height={1080}
+          className="block w-full mt-8 container h-auto"
         />
       </section>
       <Link href={"/projects/veedez"} className="cursor-pointer">
         <div className="px-4 py-12 relative">
           <h1 className="text-[48px] font-medium">Next Project</h1>
           <div className="relative">
-            <img className="" src="/images/veed.png" alt="" />
+            <Image src="/images/veed.png" alt="Veedez project" width={1920} height={400} className="w-full h-auto" />
             <div className="absolute top-1/2 left-0 w-full h-[26px] bg-la-blue/90 scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 ease-in-out origin-left -translate-y-1/2"></div>
           </div>
         </div>
@@ -87,26 +90,10 @@ export default function JeetarProcess() {
 }
 
 const appDetails = [
-  {
-    title: "Onboarding",
-    image: "/images/jeetar-onboarding.png",
-    alt: "Onboarding",
-  },
-  {
-    title: "Checkout Process",
-    image: "/images/jeetar-checkout.png",
-    alt: "Checkout Process",
-  },
-  {
-    title: "Wallet & Rewards",
-    image: "/images/jeetar-wallet.png",
-    alt: "Wallet & Rewards",
-  },
-  {
-    title: "Website",
-    image: "/images/jeetar-webapp.png",
-    alt: "Website",
-  },
+  { title: "Onboarding", image: "/images/jeetar-onboarding.png", alt: "Onboarding" },
+  { title: "Checkout Process", image: "/images/jeetar-checkout.png", alt: "Checkout Process" },
+  { title: "Wallet & Rewards", image: "/images/jeetar-wallet.png", alt: "Wallet & Rewards" },
+  { title: "Website", image: "/images/jeetar-webapp.png", alt: "Website" },
 ];
 
 const Title = ({ text, subText }: { text?: string; subText?: string }) => {

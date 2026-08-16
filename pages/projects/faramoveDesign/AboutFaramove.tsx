@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutFaramove() {
   return (
     <section className="mt-12 space-y-8">
@@ -18,7 +20,7 @@ export default function AboutFaramove() {
             <h3 className="text-lg font-bold">My Role</h3>
             <p className="text-lg">
               I was the lead designer for this project, I designed the Customer
-              & Driver’s app and also coordinated the design process from start
+              & Driver's app and also coordinated the design process from start
               to launch alongside the Project Manager, Developers and 4 other
               Designers.
             </p>
@@ -30,7 +32,7 @@ export default function AboutFaramove() {
               (Animator), Olawole (3D designer){" "}
             </p>
           </div>
-          <section className="grid grid-cols-4 gap-6 gap-y-4 mt-6">
+          <section className="grid grid-cols-2 md:grid-cols-4 gap-6 gap-y-4 mt-6">
             {faraProduct.map((product, index) => (
               <article
                 key={product.title}
@@ -42,10 +44,12 @@ export default function AboutFaramove() {
 
                 {product.icon ? (
                   <div className="flex gap-2 items-center">
-                    <img
+                    <Image
                       className="h-4 w-4"
                       src={`/icons/${product.icon}.svg`}
                       alt=""
+                      width={16}
+                      height={16}
                     />
                     <a
                       href={product.link}
@@ -66,18 +70,16 @@ export default function AboutFaramove() {
       </section>
 
       <div className="container">
-        <img src="/images/faracomponent.png" alt="" />
+        <Image src="/images/faracomponent.png" alt="Faramove components" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <div className="flex flex-col space-y-4 ">
         <div className="px-48">
           <Title
-            text="  Brand Assets"
-            subText="  These are few brand asset i led the creative on and added my
-            contributions to."
+            text="Brand Assets"
+            subText="These are few brand asset i led the creative on and added my contributions to."
           />
         </div>
-
-        <img className="container" src="/images/brandAssets.png" alt={""} />
+        <Image src="/images/brandAssets.png" alt="Brand assets" width={1920} height={1080} className="container w-full h-auto" />
       </div>
 
       <section>
@@ -134,15 +136,12 @@ export default function AboutFaramove() {
           />
         </div>
         <div className="my-12">
-        <img className="container" src="/images/farapersons.png" alt={""} />
-
+          <Image src="/images/farapersons.png" alt="User personas" width={1920} height={1080} className="container w-full h-auto" />
         </div>
-
       </section>
       <section>
         <div className="mt-10">
-          <h3 className="text-5xl font-bold mb-2 flex-1 text-center">
-            {" "}
+          <h3 className="text-3xl md:text-5xl font-bold mb-2 flex-1 text-center">
             Competitors - Comparing Existing Competitors
           </h3>
           <p className="px-48 text-lg text-start">
@@ -154,30 +153,18 @@ export default function AboutFaramove() {
       </section>
 
       <div className="pt-6">
-        <div className="flex justify-between container">
-          <img className="w-[282px] h-[124px]" src="/images/gig.png" alt="" />
-          <img
-            className="w-[282px] h-[124px]"
-            src="/images/flexport.png"
-            alt=""
-          />
-          <img
-            className="w-[282px] h-[124px]"
-            src="/images/gokada.png"
-            alt=""
-          />
-          <img
-            className="w-[282px] h-[124px]"
-            src="/images/speedaf.png"
-            alt=""
-          />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 container">
+          <Image className="w-full h-[100px] md:h-[124px] object-contain" src="/images/gig.png" alt="Gig" width={282} height={124} />
+          <Image className="w-full h-[100px] md:h-[124px] object-contain" src="/images/flexport.png" alt="Flexport" width={282} height={124} />
+          <Image className="w-full h-[100px] md:h-[124px] object-contain" src="/images/gokada.png" alt="Gokada" width={282} height={124} />
+          <Image className="w-full h-[100px] md:h-[124px] object-contain" src="/images/speedaf.png" alt="Speedaf" width={282} height={124} />
         </div>
         <p className="text-center mt-6 italic text-[#625D6F]">
           Popular competitors
         </p>
       </div>
       <div className="container">
-        <img src="/images/swotAnalysis.png" alt="" />
+        <Image src="/images/swotAnalysis.png" alt="SWOT analysis" width={1920} height={1080} className="w-full h-auto" />
       </div>
     </section>
   );
@@ -189,41 +176,12 @@ const faraProduct: Array<{
   text?: string;
   link?: string;
 }> = [
-  {
-    title: "Timeline",
-    icon: "",
-    text: "May 2023 - Ongoing",
-  },
-  {
-    title: "Website",
-    icon: "link",
-    text: "https://Faramove.com",
-    link: "https://faramove.com",
-  },
-  {
-    title: "Appstore",
-    icon: "link",
-    text: "IOS",
-    link: "https://veedezpay.com",
-  },
-  {
-    title: "Playstore",
-    icon: "link",
-    text: "Android",
-    link: "https://apps.apple.com/ng/app/veedez/id1600437976",
-  },
-  {
-    title: "Instagram",
-    icon: "link",
-    text: "https://www.instagram.com/faramovehq/",
-    link: "https://apps.apple.com/ng/https://www.instagram.com/faramovehq",
-  },
-  {
-    title: "Twitter(X)",
-    icon: "link",
-    text: "https://x.com/FaramoveHq",
-    link: "https://x.com/FaramoveHq",
-  },
+  { title: "Timeline", icon: "", text: "May 2023 - Ongoing" },
+  { title: "Website", icon: "link", text: "https://Faramove.com", link: "https://faramove.com" },
+  { title: "Appstore", icon: "link", text: "IOS", link: "https://veedezpay.com" },
+  { title: "Playstore", icon: "link", text: "Android", link: "https://apps.apple.com/ng/app/veedez/id1600437976" },
+  { title: "Instagram", icon: "link", text: "https://www.instagram.com/faramovehq/", link: "https://apps.apple.com/ng/https://www.instagram.com/faramovehq" },
+  { title: "Twitter(X)", icon: "link", text: "https://x.com/FaramoveHq", link: "https://x.com/FaramoveHq" },
 ];
 
 const Title = ({ text, subText }: { text?: string; subText: string }) => {
