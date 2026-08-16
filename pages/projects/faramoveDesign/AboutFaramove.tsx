@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutFaramove() {
   return (
     <section className="mt-12 space-y-8">
-      <section className="flex flex-col justify-center mb-4 px-48 space-y-8">
+      <section className="flex flex-col justify-center mb-4 px-4 md:px-10 lg:px-20 space-y-8">
         <Title
           text="Faramove"
           subText=" Faramove aims to revolutionise the logistics and freight forwarding
@@ -32,13 +32,11 @@ export default function AboutFaramove() {
               (Animator), Olawole (3D designer){" "}
             </p>
           </div>
-          <section className="grid grid-cols-2 md:grid-cols-4 gap-6 gap-y-4 mt-6">
-            {faraProduct.map((product, index) => (
+          <section className="grid grid-cols-2 md:grid-cols-3 gap-6 gap-y-4 mt-6">
+            {faraProduct.map((product) => (
               <article
                 key={product.title}
-                className={`flex flex-col ${
-                  index < 4 ? "col-span-1" : "col-span-2"
-                }`}
+                className="flex flex-col"
               >
                 <h4 className="text-lg font-extrabold">{product.title}</h4>
 
@@ -73,7 +71,7 @@ export default function AboutFaramove() {
         <Image src="/images/faracomponent.png" alt="Faramove components" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <div className="flex flex-col space-y-4 ">
-        <div className="px-48">
+        <div className="px-4 md:px-10 lg:px-20">
           <Title
             text="Brand Assets"
             subText="These are few brand asset i led the creative on and added my contributions to."
@@ -83,7 +81,7 @@ export default function AboutFaramove() {
       </div>
 
       <section>
-        <div className="mt-10 px-48">
+        <div className="mt-10 px-4 md:px-10 lg:px-20">
           <Title
             text="The Problem"
             subText="In today's global marketplace, the transportation of goods faces
@@ -104,7 +102,7 @@ export default function AboutFaramove() {
         </div>
       </section>
       <section>
-        <div className="px-48 mt-10">
+        <div className="px-4 md:px-10 lg:px-20 mt-10">
           <Title
             text="The Solution"
             subText="Our collaborative brainstorming sessions yielded a wealth of
@@ -120,7 +118,7 @@ export default function AboutFaramove() {
         </div>
       </section>
       <section>
-        <div className="px-48 mt-10">
+        <div className="px-4 md:px-10 lg:px-20 mt-10">
           <Title
             text="Research & Insight"
             subText=" Efficient logistics, freight forwarding, supply chain financing, and
@@ -144,7 +142,7 @@ export default function AboutFaramove() {
           <h3 className="text-3xl md:text-5xl font-bold mb-2 flex-1 text-center">
             Competitors - Comparing Existing Competitors
           </h3>
-          <p className="px-48 text-lg text-start">
+          <p className="px-4 md:px-10 lg:px-20 text-lg text-start">
             In collaboration with the Project Manager, competitive analysis of
             similar platforms was conducted. This research confirmed Faramove's
             strong potential to offer a unique value proposition in the market.

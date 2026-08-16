@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function FaramoveProcess() {
   return (
     <section className="mt-10 space-y-8">
-      <div className="flex flex-col justify-center px-48">
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-20">
         <Title
           text="The Process"
           subText="We were supposed to adopt Agile design framework,
@@ -35,7 +35,7 @@ export default function FaramoveProcess() {
         <Image src="/images/wireframesketch.png" alt="Wireframe sketches" width={1920} height={1080} className="w-full h-auto" />
       </div>
 
-      <div className="flex flex-col justify-center px-48">
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-20">
         <Title
           text="Final Design"
           subText="Leveraging the research, insights, and initial sketches, we
@@ -52,13 +52,13 @@ export default function FaramoveProcess() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-10 container">
         {designSteps.map((step, index) => (
-          <div key={index} className="flex justify-center items-center">
+          <div key={index}>
             <Image
               src={`/images/${step.image}.png`}
               alt={step.image}
               width={960}
               height={720}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto"
             />
           </div>
         ))}
@@ -73,7 +73,7 @@ export default function FaramoveProcess() {
           </div>
         ))}
       </div>
-      <div className="flex flex-col justify-center px-48 pt-10">
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-20 pt-10">
         <Title
           text="Result"
           subText="One month post-launch, we're seeing positive results! The product team

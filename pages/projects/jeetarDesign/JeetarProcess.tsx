@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function JeetarProcess() {
   return (
     <section className="mt-10 space-y-8">
-      <div className="flex flex-col justify-center px-48">
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-20">
         <Title
           text="The process"
           subText="This project followed an agile design and software development
@@ -26,7 +26,7 @@ export default function JeetarProcess() {
         <Image src="/images/jeetar-fidelity.png" alt="High fidelity" width={1920} height={1080} className="w-full h-auto" />
       </div>
 
-      <div className="flex flex-col justify-center px-48">
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-20">
         <Title
           text="Final Design"
           subText=" Leveraging the research, insights, and initial sketches, we
@@ -48,7 +48,7 @@ export default function JeetarProcess() {
           </div>
         ))}
       </div>
-      <div className="mt-10 px-48">
+      <div className="mt-10 px-4 md:px-10 lg:px-20">
         <Title
           text="Result"
           subText="Check out this awesome feedback from one of our satisfied customers on
@@ -61,7 +61,7 @@ export default function JeetarProcess() {
       </div>
 
       <section className="mt-10">
-        <div className="mt-10 px-48">
+        <div className="mt-10 px-4 md:px-10 lg:px-20">
           <Title
             text="Delivery Photos"
             subText="These are shots from different customers , how we were able to

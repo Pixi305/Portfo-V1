@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { AnimatedText } from "./AnimatedText";
 
 export default function Footer() {
   const [currentTime, setCurrentTime] = useState<string>("");
@@ -30,7 +31,9 @@ export default function Footer() {
     <footer className="py-[70px] bg-la-gray4">
       <section className="flex flex-col items-start md:items-center justify-center px-4 md:px-10 lg:px-32 text-left md:text-center">
         <h5 className="text-3xl md:text-4xl lg:text-5xl text-la-gray3 font-medium title mb-4 text-start">
-          Want to reach out about a project, collaboration or just want to say a friendly hello👋🏾?
+          <AnimatedText stagger={0.025}>
+            Want to reach out about a project, collaboration or just want to say a friendly hello?
+          </AnimatedText>
         </h5>
         <div className="flex flex-col md:flex-row gap-2 md:gap-3 items-start md:items-center justify-center mt-10">
           <a
@@ -39,7 +42,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            Get in Touch
+            <AnimatedText stagger={0.18}>Get in Touch</AnimatedText>
           </a>
         </div>
       </section>

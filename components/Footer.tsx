@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className="py-[70px]">
-      <section
+      <section 
 
         className="max-w-4xl mx-auto border-lp-gray3 bg-lp-gray3 rounded-2xl py-20"
       >
@@ -18,7 +18,7 @@ export const Footer = () => {
       <div className="flex justify-center items-center gap-9 mt-14">
         <a
           className="title"
-          href="https://www.linkedin.com/in/lateef-akinyemi-432738127/"
+          href="https://www.linkedin.com/in/abdullateef-akinyemi/"
           target="_blank"
           rel="noreferrer noopener"
         >

@@ -12,7 +12,7 @@ const Veedez = () => {
     <section className="">
       <Navbar />
       <BackButton/>
-      <Image className="container" src={veedez} alt={""} />
+      <Image className="container w-full h-auto" src={veedez} alt={"Veedez"} />
       <AboutVeedez />
       <TheProcess />
       <Footer/>
