@@ -67,6 +67,7 @@ const skillSet = [
 
 const SocialLinks = [
   { img: "/icons/dribble.svg", alt: "dribble", link: "https://dribbble.com/pixifinger" },
+  { img: "/icons/github.svg", alt: "github", link: "https://github.com/Pixi305" },
   { img: "/images/linkedin.svg", alt: "linkedin", link: "https://www.linkedin.com/in/abdullateef-akinyemi/" },
   {
     img: "/icons/adplist.svg",
