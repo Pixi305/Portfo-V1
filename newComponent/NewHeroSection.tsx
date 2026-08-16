@@ -14,7 +14,7 @@ Senior Product Designer & Design Engineer
               </AnimatedText>
             </h1>
             <p className="text-sm md:text-base max-w-full lg:max-w-[702px] text-[#595959]">
-              Senior Design Engineer and Senior Product Designer with 6+ years designing and building end-to-end digital products across edtech, fintech, logistics, and e-commerce. I don't just design interfaces, I ship them: from high-fidelity Figma work through to production using modern tools like Claude Code, Cursor, Supabase, Sanity, and Netlify. Track record of scaling products from 0–1, building design systems, and translating user research into measurable outcomes, including doubling transaction volume past $1M monthly and enabling 50K+ monthly orders. Combines deep UX/UI craft with hands-on frontend engineering and AI-assisted development.
+              Senior Design Engineer and Product Designer with 6+ years building digital products across edtech, fintech, logistics, and ecommerce. I take products from concept to launch, leading UX research, product design, and front end implementation using Figma, Claude Code, Cursor, Supabase, Sanity, and Netlify. Proven track record of scaling products beyond $1M in monthly transactions, enabling 50K+ monthly orders, and creating design systems that drive growth, usability, and business outcomes.
             </p>
             <div className="flex flex-wrap gap-2 items-start">
               {skillSet.map((skill) => (
@@ -74,10 +74,12 @@ const skillSet = [
   { text: "CREATIVE" },
   { text: "MOTION" },
   { text: "DEV" },
+  { text: "DESIGN ENGINEER" },
 ];
 
 const SocialLinks = [
   { img: "/icons/dribble.svg", alt: "dribble", link: "https://dribbble.com/pixifinger" },
+  { img: "/icons/github.svg", alt: "github", link: "https://github.com/Pixi305" },
   { img: "/images/linkedin.svg", alt: "linkedin", link: "https://www.linkedin.com/in/abdullateef-akinyemi/" },
   {
     img: "/icons/adplist.svg",

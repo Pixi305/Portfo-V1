@@ -8,7 +8,7 @@ import { OptionSlider } from "../../../components/OptionSlider";
 export default function TheProcess() {
   return (
     <section className="mt-10 space-y-8">
-      <div className="flex flex-col justify-center px-48">
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-20">
         <Title
           text="The Process"
           subText="We were supposed to adopt Agile design framework,
@@ -39,7 +39,7 @@ export default function TheProcess() {
         <Image src="/images/wireframe.png" alt="Wireframes" width={1920} height={1080} className="w-full h-auto" />
       </div>
 
-      <div className="flex flex-col justify-center px-48">
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-20">
         <Title
           text="Final design"
           subText="After so much work on research, insights and creating wireframes, it
@@ -69,7 +69,7 @@ export default function TheProcess() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center px-48">
+      <div className="flex flex-col justify-center px-4 md:px-10 lg:px-20">
         <Title
           text="Result"
           subText="As a result of the launch, we gained over 10,000 users who processed

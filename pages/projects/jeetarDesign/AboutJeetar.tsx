@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutJeetar() {
   return (
     <section className="mt-12 space-y-8">
-      <section className="flex flex-col justify-center px-48 mb-4">
+      <section className="flex flex-col justify-center px-4 md:px-10 lg:px-20 mb-4">
         <Title
           text="Jeetar"
           subText=" A super app that provides on-demand delivery services for groceries,
@@ -64,7 +64,7 @@ export default function AboutJeetar() {
       </section>
 
       <div className="flex flex-col space-y-4">
-        <div className="px-48">
+        <div className="px-4 md:px-10 lg:px-20">
           <Title
             text="Brand Assets"
             subText=" In the early stage of this project i introduced a glassmorphism icon
@@ -84,7 +84,7 @@ export default function AboutJeetar() {
       </div>
 
       <section className="">
-        <div className="px-48">
+        <div className="px-4 md:px-10 lg:px-20">
           <Title
             text="The Problem"
             subText="Homes, colleges, and similar settings often face the constant
@@ -100,7 +100,7 @@ export default function AboutJeetar() {
         </div>
       </section>
       <section>
-        <div className="px-48">
+        <div className="px-4 md:px-10 lg:px-20">
           <Title
             text="The Solution"
             subText=" 20-minute delivery grocery app should prioritize a user-friendly
@@ -113,7 +113,7 @@ export default function AboutJeetar() {
         </div>
       </section>
       <section>
-        <div className="px-48">
+        <div className="px-4 md:px-10 lg:px-20">
           <Title
             text="Research & Insight"
             subText=" Efficient logistics, freight forwarding, supply chain financing, and
@@ -134,7 +134,7 @@ export default function AboutJeetar() {
           <h3 className="text-3xl md:text-5xl font-bold mb-2 text-center">
             Competitors - Comparing Existing Competitors
           </h3>
-          <p className="text-lg px-48 ">
+          <p className="text-lg px-4 md:px-10 lg:px-20 ">
             In collaboration with the Project Manager, competitive analysis of
             similar platforms was conducted. This research confirmed Jeetar's
             strong potential to offer a unique value proposition in the market.

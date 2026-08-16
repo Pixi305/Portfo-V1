@@ -14,7 +14,7 @@ const NewJeetar = () => {
     <section className="">
       <Navbar />
       <BackButton />
-      <Image className="container" src={jeetar} alt={""} />
+      <Image className="container w-full h-auto" src={jeetar} alt={"Jeetar"} />
       <AboutJeetar />
       <JeetarProcess />
       <Footer />

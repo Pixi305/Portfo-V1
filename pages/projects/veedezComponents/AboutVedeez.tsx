@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function AboutVeedez() {
   return (
     <section className="mt-12 ">
-      <section className="flex flex-col justify-center px-48 mb-4 space-y-8 ">
+      <section className="flex flex-col justify-center px-4 md:px-10 lg:px-20 mb-4 space-y-8 ">
         <Title
           text="Veedez"
           subText="Veedez is a complete business solution that helps manage inventory,
@@ -78,7 +78,7 @@ export default function AboutVeedez() {
         <Image src="/images/veedezcomp.png" alt="Veedez components" width={1920} height={1080} className="w-full h-auto" />
       </div>
       <section>
-        <div className="px-48 mt-10 mb-8">
+        <div className="px-4 md:px-10 lg:px-20 mt-10 mb-8">
           <Title
             text="Research & Insight"
             subText="We conducted user interviews to validate our problem-solving idea.

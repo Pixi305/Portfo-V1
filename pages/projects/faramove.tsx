@@ -12,7 +12,7 @@ const NewFaramove = () => {
     <section className="">
       <Navbar />
       <BackButton />
-      <Image className="container" src={fara} alt={""} />
+      <Image className="container w-full h-auto" src={fara} alt={"Faramove"} />
       <AboutFaramove />
       <FaramoveProcess />
       <Footer />
