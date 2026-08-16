@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AnimatedText } from "./AnimatedText";
 
 export default function NewHeroSection() {
   return (
@@ -7,11 +8,13 @@ export default function NewHeroSection() {
         <div className="flex flex-col text-black p-5 md:p-6 border border-la-gray4 bg-la-gray4 flex-1 rounded-2xl">
           <div className="space-y-4 md:space-y-6">
             <h1 className="text-3xl md:text-[40px] font-semibold title max-w-full lg:max-w-[446px]">
-              I'm Lateef, a Technical + Product Designer
+              <AnimatedText withScrollTrigger={false} stagger={0.06}>
+                Lateef Akinyemi, <br></br>
+Senior Product Designer & Design Engineer
+              </AnimatedText>
             </h1>
             <p className="text-sm md:text-base max-w-full lg:max-w-[702px] text-[#595959]">
-              With more 6 years of experience in crafting digital products across Fintech, Ecommerce, Web3, AI, SaaS, and Edtech,
-              I have led product teams dedicated to enhancing product value and user experience.
+              Senior Design Engineer and Senior Product Designer with 6+ years designing and building end-to-end digital products across edtech, fintech, logistics, and e-commerce. I don't just design interfaces, I ship them: from high-fidelity Figma work through to production using modern tools like Claude Code, Cursor, Supabase, Sanity, and Netlify. Track record of scaling products from 0–1, building design systems, and translating user research into measurable outcomes, including doubling transaction volume past $1M monthly and enabling 50K+ monthly orders. Combines deep UX/UI craft with hands-on frontend engineering and AI-assisted development.
             </p>
             <div className="flex flex-wrap gap-2 items-start">
               {skillSet.map((skill) => (
@@ -75,7 +78,7 @@ const skillSet = [
 
 const SocialLinks = [
   { img: "/icons/dribble.svg", alt: "dribble", link: "https://dribbble.com/pixifinger" },
-  { img: "/images/linkedin.svg", alt: "linkedin", link: "https://www.linkedin.com/in/lateef-akinyemi-432738127/" },
+  { img: "/images/linkedin.svg", alt: "linkedin", link: "https://www.linkedin.com/in/abdullateef-akinyemi/" },
   {
     img: "/icons/adplist.svg",
     alt: "adplist",

@@ -1,10 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { AnimatedText } from "./AnimatedText";
 
 export default function Projects() {
   return (
     <section className="container mt-12 px-4 md:px-6">
-      <h1 className="font-semibold text-4xl md:text-[55px] my-6 text-center">Selected Projects</h1>
+      <h1 className="font-semibold text-4xl md:text-[55px] my-6 text-center">
+        <AnimatedText stagger={0.1}>Selected Projects</AnimatedText>
+      </h1>
       <div className="flex flex-col space-y-8 md:space-y-12 items-start">
         {projectImages.map((image) =>
           image.link ? (
