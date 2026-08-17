@@ -38,7 +38,14 @@ export default function NewHeroSection() {
             <div className="flex items-center gap-4">
               {SocialLinks.map((link) => (
                 <a key={link.alt} href={link.link} rel="noopener noreferrer" target="_blank">
-                  <Image quality={75} height={24} width={24} src={link.img} alt={link.alt} />
+                  <Image 
+                    quality={75} 
+                    height={24} 
+                    width={24} 
+                    src={link.img} 
+                    alt={link.alt}
+                    loading="lazy"
+                  />
                 </a>
               ))}
             </div>
@@ -52,6 +59,8 @@ export default function NewHeroSection() {
             width={1026}
             height={986}
             priority
+            quality={85}
+            sizes="(max-width: 1024px) 100vw, 513px"
             className="w-full h-auto rounded-2xl object-cover"
           />
         </div>
@@ -60,8 +69,8 @@ export default function NewHeroSection() {
       <div className="flex flex-col justify-center mt-10">
         <p className="text-sm font-medium text-center">Mentoring & Membership</p>
         <div className="flex gap-8 md:gap-16 justify-center mt-4">
-          <Image src="/icons/adp.svg" alt="adp" width={137} height={37} />
-          <Image src="/icons/foundation.svg" alt="foundation" width={132} height={43} />
+          <Image src="/icons/adp.svg" alt="adp" width={137} height={37} loading="lazy" />
+          <Image src="/icons/foundation.svg" alt="foundation" width={132} height={43} loading="lazy" />
         </div>
       </div>
     </section>

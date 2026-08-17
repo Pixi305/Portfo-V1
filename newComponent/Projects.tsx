@@ -25,6 +25,8 @@ export default function Projects() {
               height={1252}
               className="w-full h-auto block"
               priority={i === 0}
+              quality={i === 0 ? 85 : 75}
+              sizes="100vw"
             />
           );
 

@@ -22,11 +22,12 @@ export default function LifeStyle() {
             >
               <div className="h-16 w-16 flex items-center justify-center">
                 <Image
-                  quality={100}
+                  quality={75}
                   src={`/images/${action.image}.svg`}
                   height={64}
                   width={64}
                   alt=""
+                  loading="lazy"
                 />
               </div>
 
