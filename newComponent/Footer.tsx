@@ -11,12 +11,11 @@ export default function Footer() {
         new Date().toLocaleTimeString("en-US", {
           hour: "2-digit",
           minute: "2-digit",
-          second: "2-digit",
         })
       );
     };
     updateTime();
-    const intervalId = setInterval(updateTime, 1000);
+    const intervalId = setInterval(updateTime, 60000);
     return () => clearInterval(intervalId);
   }, []);
 
@@ -53,6 +52,8 @@ export default function Footer() {
           alt="Footer Logo"
           width={2875}
           height={869}
+          quality={75}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 768px, 1200px"
           className="md:max-w-full lg:max-w-full w-full h-auto"
         />
       </div>

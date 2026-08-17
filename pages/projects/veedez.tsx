@@ -1,6 +1,4 @@
 import Image from "next/image";
-import veedez from "../../public/images/Veedez.png";
-
 import Navbar from "../../newComponent/Navbar";
 import AboutVeedez from "./veedezComponents/AboutVedeez";
 import TheProcess from "./veedezComponents/TheProcess";
@@ -12,7 +10,16 @@ const Veedez = () => {
     <section className="">
       <Navbar />
       <BackButton/>
-      <Image className="container w-full h-auto" src={veedez} alt={"Veedez"} />
+      <Image 
+        className="container w-full h-auto" 
+        src="/images/Veedez.png" 
+        alt={"Veedez"} 
+        width={2650}
+        height={1252}
+        sizes="100vw"
+        quality={85}
+        priority
+      />
       <AboutVeedez />
       <TheProcess />
       <Footer/>
